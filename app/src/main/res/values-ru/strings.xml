@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AssignmentApp</string>
 
-    <string name="login">Login</string>
+    <string name="login">Вход</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
+    <string name="password">Пароль</string>
 </resources>

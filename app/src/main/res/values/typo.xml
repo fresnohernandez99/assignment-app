@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Headline -->
+    <style name="AppTypography.Headline" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textFontWeight" xmlns:android="http://schemas.android.com/apk/res/android">400</item>
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">36sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <!-- Title Medium -->
+    <style name="AppTypography.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textFontWeight" xmlns:android="http://schemas.android.com/apk/res/android">500</item>
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">18sp</item>
+        <item name="android:letterSpacing">0.009375</item> <!-- 0.15 / 16 -->
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <!-- Body Medium -->
+    <style name="AppTypography.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textFontWeight" xmlns:android="http://schemas.android.com/apk/res/android">400</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:letterSpacing">0.017857</item> <!-- 0.25 / 14 -->
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <!-- Button -->
+    <style name="AppTypography.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textFontWeight" xmlns:android="http://schemas.android.com/apk/res/android">500</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:letterSpacing">0.00714</item> <!-- 0.1 / 14 -->
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+
+    <!-- Button Small -->
+    <style name="AppTypography.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:fontFamily">sans-serif-medium</item> <!-- Roboto 600 defaults to sans-serif-medium or bold -->
+        <item name="android:textFontWeight" xmlns:android="http://schemas.android.com/apk/res/android">600</item>
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">15sp</item>
+        <item name="android:letterSpacing">0.03333</item> <!-- 0.4 / 12 -->
+        <item name="android:textColor">?attr/colorOnBackground</item>
+    </style>
+</resources>
