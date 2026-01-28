@@ -16,7 +16,7 @@
         <item name="android:textFontWeight" xmlns:android="http://schemas.android.com/apk/res/android">500</item>
         <item name="android:textSize">16sp</item>
         <item name="lineHeight">18sp</item>
-        <item name="android:letterSpacing">0.009375</item> <!-- 0.15 / 16 -->
+        <item name="android:letterSpacing">0.009</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
@@ -26,7 +26,7 @@
         <item name="android:textFontWeight" xmlns:android="http://schemas.android.com/apk/res/android">400</item>
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">20sp</item>
-        <item name="android:letterSpacing">0.017857</item> <!-- 0.25 / 14 -->
+        <item name="android:letterSpacing">0.017</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
     </style>
 
@@ -36,8 +36,9 @@
         <item name="android:textFontWeight" xmlns:android="http://schemas.android.com/apk/res/android">500</item>
         <item name="android:textSize">14sp</item>
         <item name="lineHeight">20sp</item>
-        <item name="android:letterSpacing">0.00714</item> <!-- 0.1 / 14 -->
+        <item name="android:letterSpacing">0.007</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <!-- Button Small -->
@@ -46,7 +47,8 @@
         <item name="android:textFontWeight" xmlns:android="http://schemas.android.com/apk/res/android">600</item>
         <item name="android:textSize">12sp</item>
         <item name="lineHeight">15sp</item>
-        <item name="android:letterSpacing">0.03333</item> <!-- 0.4 / 12 -->
+        <item name="android:letterSpacing">0.03</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:textAlignment">center</item>
     </style>
 </resources>

@@ -1,11 +1,16 @@
 package com.fresnohernandez.assignmentapp.ui.login
 
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.fresnohernandez.assignmentapp.R
 import com.fresnohernandez.assignmentapp.common.collect
 import com.fresnohernandez.assignmentapp.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -18,6 +23,7 @@ class LoginFragment : Fragment() {
 
     private val viewModel by viewModels<LoginViewModel>()
 
+    // region LifeCycle
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,9 +36,21 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        with(binding) {}
-
+        uiBind()
         collectState()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    // endregion LifeCycle
+
+    private fun uiBind() {
+        with(binding) {
+            tvDontHaveAccountBtn.text = generateSignUpText()
+        }
     }
 
     private fun collectState() {
@@ -43,8 +61,26 @@ class LoginFragment : Fragment() {
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    // region Utility
+    private fun generateSignUpText(): SpannableString {
+        val fullText = getString(R.string.dont_have_account)
+        val spannable = SpannableString(fullText)
+
+        // Buscamos "Sign up" para aplicar el color.
+        // Nota: En una app real, podrías querer usar marcadores en el string o buscar por contenido.
+        val target = getString(R.string.sign_up)
+        val startIndex = fullText.indexOf(target)
+
+        if (startIndex != -1) {
+            spannable.setSpan(
+                ForegroundColorSpan(ContextCompat.getColor(requireContext(), R.color.primaryLight)),
+                startIndex,
+                startIndex + target.length,
+                Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+            )
+        }
+
+        return spannable
     }
+    // endregion Utility
 }

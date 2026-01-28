@@ -5,4 +5,9 @@
     <string name="email">Email</string>
     <string name="password">Пароль</string>
     <string name="enter_password">Введите пароль</string>
+    <string name="dont_have_account">Нету аккауnta? Регистрация</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="forgot_password">Забыл пароль</string>
+    <string name="desc_vk_login">Кнопка входа через VK</string>
+    <string name="desc_ok_login">Кнопка входа через OK</string>
 </resources>
