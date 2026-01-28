@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.fresnohernandez.assignmentapp.R
 import com.fresnohernandez.assignmentapp.common.collect
 import com.fresnohernandez.assignmentapp.databinding.FragmentLoginBinding
@@ -98,13 +99,18 @@ class LoginFragment : Fragment() {
 
                 override fun afterTextChanged(s: Editable?) {}
             })
+
+            loginBtn.setOnClickListener {
+                findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
+            }
         }
     }
 
     private fun collectState() {
         with(binding) {
             viewModel.uiState.collect(viewLifecycleOwner) { state ->
-                loginBtn.isEnabled = isValidEmail(state.emailInput)
+                loginBtn.isEnabled =
+                    isValidEmail(state.emailInput) && state.passwordInput.isNotEmpty()
             }
         }
     }
