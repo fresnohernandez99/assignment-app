@@ -10,4 +10,5 @@
     <string name="forgot_password">Forgot password</string>
     <string name="desc_vk_login">VK social media button</string>
     <string name="desc_ok_login">OK social media button</string>
+    <string name="simulate_login_time">Simulating login time</string>
 </resources>

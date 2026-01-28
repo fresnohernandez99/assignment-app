@@ -1,170 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="?attr/backgroundColor">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingStart="@dimen/spacing_medium"
-        android:paddingTop="@dimen/spacing_top"
-        android:paddingEnd="@dimen/spacing_medium"
-        android:paddingBottom="@dimen/spacing_medium">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:textAppearance="@style/AppTypography.Headline" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/spacing_extra_large"
-            android:text="@string/email"
-            android:textAppearance="@style/AppTypography.TitleMedium" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/AppWidget.TextField.Flat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_short">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="example@gmail.com"
-                android:inputType="textEmailAddress"
-                android:padding="@dimen/spacing_medium"
-                android:textAppearance="@style/AppTypography.BodyMedium"
-                android:textColorHint="?attr/colorOnPrimaryContainer"
-                tools:ignore="HardcodedText" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="@dimen/spacing_medium"
-            android:text="@string/password"
-            android:textAppearance="@style/AppTypography.TitleMedium" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/AppWidget.TextField.Flat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_short">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/enter_password"
-                android:inputType="textPassword"
-                android:padding="@dimen/spacing_medium"
-                android:textAppearance="@style/AppTypography.BodyMedium"
-                android:textColorHint="?attr/colorOnPrimaryContainer"
-                tools:ignore="HardcodedText" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/loginBtn"
-            style="@style/AppTypography.LabelLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_large"
-            android:enabled="false"
-            android:text="@string/login" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvDontHaveAccountBtn"
-            style="@style/AppTypography.LabelLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_medium"
-            android:text="@string/dont_have_account"
-            android:textColor="?attr/colorOnBackground" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/forgotPasswordBtn"
-            style="@style/AppTypography.LabelLarge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_short"
-            android:text="@string/forgot_password"
-            android:textColor="?attr/colorPrimary" />
-
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_extra_large" />
+        android:layout_height="match_parent"
+        android:background="?attr/backgroundColor"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/spacing_extra_large"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            android:orientation="vertical"
+            android:paddingStart="@dimen/spacing_medium"
+            android:paddingTop="@dimen/spacing_top"
+            android:paddingEnd="@dimen/spacing_medium"
+            android:paddingBottom="@dimen/spacing_medium">
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardLoginVK"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="4dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardBackgroundColor="#2683ED"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:textAppearance="@style/AppTypography.Headline" />
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="@string/desc_vk_login"
-                    android:src="@drawable/vk_logo"
-                    app:tint="@android:color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/spacing_extra_large"
+                android:text="@string/email"
+                android:textAppearance="@style/AppTypography.TitleMedium" />
 
-            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/AppWidget.TextField.Flat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_short">
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardLoginOk"
-                android:layout_width="0dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="4dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:focusable="true"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp">
-
-                <ImageView
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/gradient_blue" />
+                    android:layout_height="wrap_content"
+                    android:hint="example@gmail.com"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/spacing_medium"
+                    android:textAppearance="@style/AppTypography.BodyMedium"
+                    android:textColorHint="?attr/colorOnPrimaryContainer"
+                    tools:ignore="HardcodedText" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                <ImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="@string/desc_ok_login"
-                    android:src="@drawable/ok_logo"
-                    app:tint="@android:color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/spacing_medium"
+                android:text="@string/password"
+                android:textAppearance="@style/AppTypography.TitleMedium" />
 
-            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/AppWidget.TextField.Flat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_short">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_password"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/spacing_medium"
+                    android:textAppearance="@style/AppTypography.BodyMedium"
+                    android:textColorHint="?attr/colorOnPrimaryContainer"
+                    tools:ignore="HardcodedText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/loginBtn"
+                style="@style/AppTypography.LabelLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:enabled="false"
+                android:text="@string/login" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDontHaveAccountBtn"
+                style="@style/AppTypography.LabelLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:text="@string/dont_have_account"
+                android:textColor="?attr/colorOnBackground" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/forgotPasswordBtn"
+                style="@style/AppTypography.LabelLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_short"
+                android:text="@string/forgot_password"
+                android:textColor="?attr/colorPrimary" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_extra_large" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_extra_large"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardLoginVK"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="#2683ED"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/desc_vk_login"
+                        android:src="@drawable/vk_logo"
+                        app:tint="@android:color/white" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardLoginOk"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/gradient_blue" />
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/desc_ok_login"
+                        android:src="@drawable/ok_logo"
+                        app:tint="@android:color/white" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
-</androidx.core.widget.NestedScrollView>
+    <FrameLayout
+        android:id="@+id/loadingFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.4"
+            android:visibility="gone"
+            android:background="?attr/colorOnBackground" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/backgroundColor"
+                android:text="@string/simulate_login_time"
+                android:textAppearance="@style/AppTypography.BodyMedium" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
