@@ -13,4 +13,8 @@ class LoginViewModel @Inject constructor() : ViewModel() {
     private var _uiState = MutableStateFlow(LoginUiState())
     val uiState: StateFlow<LoginUiState> = _uiState.asStateFlow()
 
+    fun updateState(email: String? = null, password: String? = null) {
+        email?.let { _uiState.tryEmit(uiState.value.copy(emailInput = it)) }
+        password?.let { _uiState.tryEmit(uiState.value.copy(passwordInput = it)) }
+    }
 }

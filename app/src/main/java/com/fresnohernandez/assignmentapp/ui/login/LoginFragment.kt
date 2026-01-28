@@ -1,22 +1,23 @@
 package com.fresnohernandez.assignmentapp.ui.login
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
 import android.text.SpannableString
 import android.text.Spanned
+import android.text.TextWatcher
 import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.fresnohernandez.assignmentapp.R
 import com.fresnohernandez.assignmentapp.common.collect
 import com.fresnohernandez.assignmentapp.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
-import androidx.core.net.toUri
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
@@ -63,13 +64,47 @@ class LoginFragment : Fragment() {
                 val intent = Intent(Intent.ACTION_VIEW, "https://ok.com".toUri())
                 startActivity(intent)
             }
+
+            etEmail.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(
+                    s: CharSequence?,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) {
+                }
+
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    val value = s.toString()
+                    viewModel.updateState(email = value)
+                }
+
+                override fun afterTextChanged(s: Editable?) {}
+            })
+
+            etPassword.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(
+                    s: CharSequence?,
+                    start: Int,
+                    count: Int,
+                    after: Int
+                ) {
+                }
+
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    val value = s.toString()
+                    viewModel.updateState(password = value)
+                }
+
+                override fun afterTextChanged(s: Editable?) {}
+            })
         }
     }
 
     private fun collectState() {
         with(binding) {
             viewModel.uiState.collect(viewLifecycleOwner) { state ->
-
+                loginBtn.isEnabled = isValidEmail(state.emailInput)
             }
         }
     }
@@ -79,8 +114,6 @@ class LoginFragment : Fragment() {
         val fullText = getString(R.string.dont_have_account)
         val spannable = SpannableString(fullText)
 
-        // Buscamos "Sign up" para aplicar el color.
-        // Nota: En una app real, podrías querer usar marcadores en el string o buscar por contenido.
         val target = getString(R.string.sign_up)
         val startIndex = fullText.indexOf(target)
 
@@ -95,5 +128,10 @@ class LoginFragment : Fragment() {
 
         return spannable
     }
+
+    private fun isValidEmail(email: String): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    }
+
     // endregion Utility
 }
