@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary -->
-    <color name="primary">#6750A4</color>
-    <color name="onPrimary">#FFFFFF</color>
-    <color name="primaryContainer">#EADDFF</color>
-    <color name="onPrimaryContainer">#21005D</color>
+    <!-- Light Theme Palette -->
+    <color name="primaryLight">#12B956</color>
+    <color name="primaryContainerLight">#EADDFF</color>
+    <color name="backgroundLight">#FEF7FF</color>
+    <color name="onBackgroundLight">#1D1B20</color>
+    <color name="surfaceLight">#FEF7FF</color>
+    <color name="onSurfaceLight">#1D1B20</color>
 
-    <!-- Secondary -->
-    <color name="secondary">#625B71</color>
-    <color name="onSecondary">#FFFFFF</color>
-
-    <!-- Background / Surface -->
-    <color name="background">#FEF7FF</color>
-    <color name="onBackground">#1D1B20</color>
-    <color name="surface">#FEF7FF</color>
-    <color name="onSurface">#1D1B20</color>
-
-    <!-- Dark Mode Variants -->
-    <color name="primary_dark">#D0BCFF</color>
-    <color name="onPrimary_dark">#381E72</color>
-    <color name="background_dark">#141218</color>
-    <color name="onBackground_dark">#F2F2F3</color>
+    <!-- Dark Theme Palette -->
+    <color name="primaryDark">#12B956</color>
+    <color name="primaryContainerDark">#32333A</color>
+    <color name="onPrimaryContainerDark">#929296</color>
+    <color name="backgroundDark">#151515</color>
+    <color name="onBackgroundDark">#F2F2F3</color>
+    <color name="surfaceDark">#1C1B1F</color>
+    <color name="onSurfaceDark">#E6E1E9</color>
 </resources>

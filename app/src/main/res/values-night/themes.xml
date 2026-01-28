@@ -1,9 +1,22 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.AssignmentApp" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Dark Color Palette --><item name="colorPrimary">@color/primary_dark</item>
-        <item name="colorOnPrimary">@color/onPrimary_dark</item>
-        <item name="android:windowBackground">@color/background_dark</item>
-        <item name="colorOnBackground">@color/onBackground_dark</item>
+        <item name="colorPrimary">@color/primaryDark</item>
+
+        <item name="colorPrimaryContainer">@color/primaryContainerDark</item>
+        <item name="colorOnPrimaryContainer">@color/onPrimaryContainerDark</item>
+
+        <item name="backgroundColor">@color/backgroundDark</item>
+        <item name="colorOnBackground">@color/onBackgroundDark</item>
+
+        <item name="colorSurface">@color/surfaceDark</item>
+        <item name="colorOnSurface">@color/onSurfaceDark</item>
+
+        <!-- Typography Mapping -->
+        <item name="textAppearanceHeadlineLarge">@style/AppTypography.Headline</item>
+        <item name="textAppearanceTitleMedium">@style/AppTypography.TitleMedium</item>
+        <item name="textAppearanceBodyMedium">@style/AppTypography.BodyMedium</item>
+        <item name="textAppearanceLabelLarge">@style/AppTypography.LabelLarge</item>
+        <item name="textAppearanceLabelSmall">@style/AppTypography.LabelSmall</item>
     </style>
 </resources>

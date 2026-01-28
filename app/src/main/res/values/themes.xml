@@ -1,22 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.AssignmentApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Color Palette -->
-        <item name="colorPrimaryContainer">@color/primaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/onPrimaryContainer</item>
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorOnSecondary">@color/onSecondary</item>
-        <item name="colorSurface">@color/surface</item>
-        <item name="colorOnSurface">@color/onSurface</item>
+<!--        <item name="colorPrimary">@color/primaryLight</item>-->
+<!--        <item name="colorPrimaryContainer">@color/primaryContainerLight</item>-->
+<!--        <item name="backgroundColor">@color/backgroundLight</item>-->
+<!--        <item name="colorOnBackground">@color/onBackgroundLight</item>-->
+<!--        <item name="colorSurface">@color/surfaceLight</item>-->
+<!--        <item name="colorOnSurface">@color/onSurfaceLight</item>-->
 
-<!--        <item name="colorPrimary">@color/primary</item>-->
-<!--        <item name="colorOnPrimary">@color/onPrimary</item>-->
-<!--        <item name="colorOnBackground">@color/onBackground</item>-->
-<!--        <item name="android:windowBackground">@color/background</item>-->
+        <item name="colorPrimary">@color/primaryDark</item>
 
-        <!-- Dark Color Palette --><item name="colorPrimary">@color/primary_dark</item>
-        <item name="colorOnPrimary">@color/onPrimary_dark</item>
-        <item name="android:windowBackground">@color/background_dark</item>
-        <item name="colorOnBackground">@color/onBackground_dark</item>
+        <item name="colorPrimaryContainer">@color/primaryContainerDark</item>
+        <item name="colorOnPrimaryContainer">@color/onPrimaryContainerDark</item>
+
+        <item name="backgroundColor">@color/backgroundDark</item>
+        <item name="colorOnBackground">@color/onBackgroundDark</item>
+
+        <item name="colorSurface">@color/surfaceDark</item>
+        <item name="colorOnSurface">@color/onSurfaceDark</item>
 
         <!-- Typography Mapping -->
         <item name="textAppearanceHeadlineLarge">@style/AppTypography.Headline</item>
