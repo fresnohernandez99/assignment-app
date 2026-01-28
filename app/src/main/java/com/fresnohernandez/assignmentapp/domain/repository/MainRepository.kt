@@ -1,0 +1,3 @@
+package com.fresnohernandez.assignmentapp.domain.repository
+
+interface MainRepository
