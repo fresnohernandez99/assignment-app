@@ -1,5 +1,7 @@
 package com.fresnohernandez.assignmentapp.ui.login
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
@@ -14,6 +16,7 @@ import com.fresnohernandez.assignmentapp.R
 import com.fresnohernandez.assignmentapp.common.collect
 import com.fresnohernandez.assignmentapp.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
+import androidx.core.net.toUri
 
 @AndroidEntryPoint
 class LoginFragment : Fragment() {
@@ -50,6 +53,16 @@ class LoginFragment : Fragment() {
     private fun uiBind() {
         with(binding) {
             tvDontHaveAccountBtn.text = generateSignUpText()
+
+            cardLoginVK.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, "https://vk.com".toUri())
+                startActivity(intent)
+            }
+
+            cardLoginOk.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, "https://ok.com".toUri())
+                startActivity(intent)
+            }
         }
     }
 
