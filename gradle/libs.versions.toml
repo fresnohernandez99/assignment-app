@@ -17,6 +17,9 @@ room = "2.8.4"
 retrofit = "3.0.0"
 hilt = "2.58"
 navigation = "2.9.6"
+kotlinx-coroutines-test = "1.9.0"
+turbine = "1.1.0"
+mockk = "1.13.12"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -39,6 +42,9 @@ hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
 navigation-ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
 coil = { group = "io.coil-kt", name = "coil", version.ref = "coilVersion" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
