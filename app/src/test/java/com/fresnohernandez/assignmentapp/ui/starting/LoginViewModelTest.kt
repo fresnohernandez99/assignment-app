@@ -1,6 +1,8 @@
-package com.fresnohernandez.assignmentapp.ui.login
+package com.fresnohernandez.assignmentapp.ui.starting
 
 import app.cash.turbine.test
+import com.fresnohernandez.assignmentapp.ui.starting.screens.login.LoginUiState
+import com.fresnohernandez.assignmentapp.ui.starting.screens.login.LoginViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher

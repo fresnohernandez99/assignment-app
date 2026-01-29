@@ -1,4 +1,4 @@
-package com.fresnohernandez.assignmentapp.ui.login
+package com.fresnohernandez.assignmentapp.ui.starting.screens.login
 
 data class LoginUiState(
     val isLoading: Boolean = false,

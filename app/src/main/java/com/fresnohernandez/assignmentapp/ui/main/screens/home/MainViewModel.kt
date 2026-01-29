@@ -1,4 +1,4 @@
-package com.fresnohernandez.assignmentapp.ui.main
+package com.fresnohernandez.assignmentapp.ui.main.screens.home
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

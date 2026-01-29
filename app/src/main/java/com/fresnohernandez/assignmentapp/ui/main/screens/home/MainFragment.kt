@@ -1,4 +1,4 @@
-package com.fresnohernandez.assignmentapp.ui.main
+package com.fresnohernandez.assignmentapp.ui.main.screens.home
 
 import android.os.Bundle
 import android.view.LayoutInflater

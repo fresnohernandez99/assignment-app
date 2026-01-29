@@ -1,4 +1,4 @@
-package com.fresnohernandez.assignmentapp.ui.main
+package com.fresnohernandez.assignmentapp.ui.main.screens.home
 
 data class MainUiState(
     val isLoading: Boolean = false,

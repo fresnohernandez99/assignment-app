@@ -1,4 +1,4 @@
-package com.fresnohernandez.assignmentapp.ui.login
+package com.fresnohernandez.assignmentapp.ui.starting.screens.login
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.text.SpannableString
 import android.text.Spanned
 import android.text.TextWatcher
 import android.text.style.ForegroundColorSpan
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,10 +17,10 @@ import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.fresnohernandez.assignmentapp.R
 import com.fresnohernandez.assignmentapp.common.collect
 import com.fresnohernandez.assignmentapp.databinding.FragmentLoginBinding
+import com.fresnohernandez.assignmentapp.ui.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -140,13 +141,14 @@ class LoginFragment : Fragment() {
     }
 
     private fun isValidEmail(email: String): Boolean {
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
     private fun simulateLogin() {
         hideKeyboardAndClearFocus()
         viewModel.login {
-            findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
+            val intent = Intent(requireContext(), MainActivity::class.java)
+            requireContext().startActivity(intent)
         }
     }
 
@@ -154,7 +156,8 @@ class LoginFragment : Fragment() {
         with(binding) {
             etEmail.clearFocus()
             etPassword.clearFocus()
-            val imm = requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+            val imm =
+                requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
             imm?.hideSoftInputFromWindow(view?.windowToken, 0)
         }
     }
