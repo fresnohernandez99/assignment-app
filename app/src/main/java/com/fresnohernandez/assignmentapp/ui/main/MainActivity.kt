@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
         setupBottomNavigation()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -33,17 +33,20 @@ class MainActivity : AppCompatActivity() {
     private fun setupBottomNavigation() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.homeFragment -> {
+                R.id.homeMenuItem -> {
                     true
                 }
-                R.id.search_menu_item -> {
-                    Toast.makeText(this, getString(R.string.menu_search), Toast.LENGTH_SHORT).show()
-                    true 
-                }
-                R.id.profile_menu_item -> {
-                    Toast.makeText(this, getString(R.string.menu_profile), Toast.LENGTH_SHORT).show()
+
+                R.id.favoritesMenuItem -> {
+                    Toast.makeText(this, getString(R.string.favorites), Toast.LENGTH_SHORT).show()
                     true
                 }
+
+                R.id.accountMenuItem -> {
+                    Toast.makeText(this, getString(R.string.account), Toast.LENGTH_SHORT).show()
+                    true
+                }
+
                 else -> false
             }
         }

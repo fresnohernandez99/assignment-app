@@ -11,4 +11,7 @@
     <string name="desc_vk_login">Кнопка входа через VK</string>
     <string name="desc_ok_login">Кнопка входа через OK</string>
     <string name="simulate_login_time">Имитирование времени входа</string>
+    <string name="account">Аккаунт</string>
+    <string name="favorites">Избранное</string>
+    <string name="home">Главная</string>
 </resources>

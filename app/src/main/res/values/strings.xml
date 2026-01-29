@@ -11,8 +11,7 @@
     <string name="desc_vk_login">VK social media button</string>
     <string name="desc_ok_login">OK social media button</string>
     <string name="simulate_login_time">Simulating login time</string>
-
-    <string name="menu_home">Home</string>
-    <string name="menu_search">Search</string>
-    <string name="menu_profile">Profile</string>
+    <string name="account">Account</string>
+    <string name="favorites">Favorites</string>
+    <string name="home">Home</string>
 </resources>
