@@ -1,11 +1,12 @@
 package com.fresnohernandez.assignmentapp.ui.main
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.fresnohernandez.assignmentapp.R
 import com.fresnohernandez.assignmentapp.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,24 +32,31 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNavigation() {
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.homeMenuItem -> {
-                    true
-                }
+        with(binding) {
+            bottomNavigation.setOnItemSelectedListener { item ->
+                when (item.itemId) {
+                    R.id.homeFragment -> {
+                        true
+                    }
 
-                R.id.favoritesMenuItem -> {
-                    Toast.makeText(this, getString(R.string.favorites), Toast.LENGTH_SHORT).show()
-                    true
-                }
+                    R.id.favoritesFragment -> {
+                        //Toast.makeText(this, getString(R.string.favorites), Toast.LENGTH_SHORT).show()
+                        true
+                    }
 
-                R.id.accountMenuItem -> {
-                    Toast.makeText(this, getString(R.string.account), Toast.LENGTH_SHORT).show()
-                    true
-                }
+                    R.id.profileFragment -> {
+                        //Toast.makeText(this, getString(R.string.account), Toast.LENGTH_SHORT).show()
+                        true
+                    }
 
-                else -> false
+                    else -> false
+                }
             }
+
+            val navHostFragment = supportFragmentManager
+                .findFragmentById(R.id.mainContainerView) as NavHostFragment
+            val navController = navHostFragment.navController
+            bottomNavigation.setupWithNavController(navController)
         }
     }
 }
