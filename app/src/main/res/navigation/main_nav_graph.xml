@@ -8,6 +8,6 @@
         android:id="@+id/homeFragment"
         android:name="com.fresnohernandez.assignmentapp.ui.main.screens.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_home" />
 
 </navigation>

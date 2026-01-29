@@ -14,4 +14,5 @@
     <string name="account">Account</string>
     <string name="favorites">Favorites</string>
     <string name="home">Home</string>
+    <string name="search_courses">Search courses</string>
 </resources>
